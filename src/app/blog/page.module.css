@@ -1,0 +1,32 @@
+.hero {
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 0 10px;
+}
+
+.title {
+  font-size: 2.5em;
+  font-weight: 600;
+  font-family: var(--font-header);
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 1.5em;
+  font-weight: 400;
+  font-family: var(--font-header);
+  margin: 0;
+  text-align: center;
+}
+
+.etiquette {
+  font-size: 1.2em;
+  font-weight: 400;
+  font-family: var(--font-header);
+  margin: 0;
+  padding: 8px 10px;
+}
