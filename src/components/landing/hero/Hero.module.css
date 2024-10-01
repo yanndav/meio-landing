@@ -1,0 +1,28 @@
+.container {
+  min-height: calc(100vh - 100px);
+  width: calc(100% - 40px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  gap: 1.7em;
+  background: linear-gradient(270deg, #a7a3bb, #b9b8c2);
+}
+
+.accroche {
+  font-family: var(--font-header);
+  font-size: 3rem;
+  text-align: center;
+  line-height: 1.7em;
+  font-weight: 600;
+  width: 700px;
+  max-width: calc(100% - 40px);
+  padding: 0px 20px;
+}
+
+@media (max-width: 600px) {
+  .accroche {
+    font-size: 2rem;
+  }
+}
