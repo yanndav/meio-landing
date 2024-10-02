@@ -18,17 +18,20 @@ const Etiquette: React.FC<EtiquetteProps> = ({ etiquettes }) => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      console.log("interval");
-      setIndex((prevCount) => prevCount + 1);
-      setData(etiquettes[index % etiquettes.length]);
-    }, 2000);
+      setIndex((prevIndex) => {
+        const nextIndex = (prevIndex + 1) % etiquettes.length; // Calculate the next index
+        setData(etiquettes[nextIndex]); // Update data with the next index
+        return nextIndex; // Return the new index
+      });
+    }, 1800);
 
     return () => clearInterval(interval);
-  }, [index]);
+  }, []);
 
   return (
     <div
       className={styles.etiquette}
+      id={`etiquette-${index}`}
       style={{
         backgroundColor: `var(${data.background})`,
         color: `var(${data.foreground})`,
