@@ -16,23 +16,42 @@ import {
   PiChats,
   PiPresentationChart,
 } from "react-icons/pi";
-export const iconMap: Record<string, React.FC> = {
-  PiLightbulb: PiLightbulb,
-  PiChartBarHorizontal: PiChartBarHorizontal,
-  PiPuzzlePiece: PiPuzzlePiece,
-  PiUsersFour: PiUsersFour,
-  PiChartLineUp: PiChartLineUp,
-  PiAirTrafficControl: PiAirTrafficControl,
-  PiCalendarDots: PiCalendarDots,
-  PiChalkboardSimple: PiChalkboardSimple,
-  PiListPlus: PiListPlus,
-  PiGraph: PiGraph,
-  PiCompassTool: PiCompassTool,
-  PiPlugsConnected: PiPlugsConnected,
-  PiBellRinging: PiBellRinging,
-  PiClockCounterClockwiseFill: PiClockCounterClockwiseFill,
-  PiChats: PiChats,
-  PiPresentationChart: PiPresentationChart,
+import { FC } from "react";
+
+interface IconProps {
+  size: number; // Définir ici le type des props que votre composant attend
+}
+
+const createIconComponent = (
+  Icon: FC<{ size?: number }> // Adapter le type pour accepter size
+): FC<IconProps> => {
+  // Wrapper qui prend size comme prop
+  const IconComponent: FC<IconProps> = ({ size }) => {
+    return <Icon size={size} />; // Passer size directement
+  };
+
+  // Ajouter un nom d'affichage
+  IconComponent.displayName = `IconComponent(${Icon.displayName || Icon.name})`;
+  return IconComponent;
+};
+
+export const iconMap: Record<string, FC<IconProps>> = {
+  PiLightbulb: createIconComponent(PiLightbulb),
+  PiChartBarHorizontal: createIconComponent(PiChartBarHorizontal),
+  PiPuzzlePiece: createIconComponent(PiPuzzlePiece),
+  PiUsersFour: createIconComponent(PiUsersFour),
+  PiChartLineUp: createIconComponent(PiChartLineUp),
+  PiAirTrafficControl: createIconComponent(PiAirTrafficControl),
+  PiCalendarDots: createIconComponent(PiCalendarDots),
+  PiChalkboardSimple: createIconComponent(PiChalkboardSimple),
+  PiListPlus: createIconComponent(PiListPlus),
+  PiGraph: createIconComponent(PiGraph),
+  PiCompassTool: createIconComponent(PiCompassTool),
+  PiPlugsConnected: createIconComponent(PiPlugsConnected),
+  PiBellRinging: createIconComponent(PiBellRinging),
+  PiClockCounterClockwiseFill: createIconComponent(PiClockCounterClockwiseFill),
+  PiChats: createIconComponent(PiChats),
+  PiPresentationChart: createIconComponent(PiPresentationChart),
 };
 export const data: {
   title: string;

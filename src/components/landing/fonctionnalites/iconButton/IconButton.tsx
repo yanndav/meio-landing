@@ -1,10 +1,11 @@
 import React from "react";
 
 interface IconButtonProps {
-  icon: React.FC;
+  icon: React.FC<{ size: number }>;
   color: string;
-  type: string;
+  type: "title" | "icon"; // Limiter le type pour plus de sécurité
 }
+
 const IconButton: React.FC<IconButtonProps> = ({ icon, color, type }) => {
   const Icon = icon;
   return (
