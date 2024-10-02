@@ -1,0 +1,27 @@
+.vue {
+  margin-bottom: 70px;
+}
+
+.editor {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.editor div {
+  outline: none;
+  width: 800px;
+  max-width: 90%;
+}
+
+.editor div:focus {
+  outline: none !important;
+  gap: 30px;
+}
+
+.editor p {
+  line-height: 1.7em;
+  text-wrap: pretty;
+}

@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 5%;
+}
+
+.container h1 {
+  font-size: 2.5em;
+  font-weight: 600;
+  margin: 0;
+  text-align: center;
+}
+
+.container h1:focus,
+.container h2:focus {
+  outline: none;
+}
+.container h2 {
+  font-size: 2em;
+  font-weight: 400;
+  margin: 0;
+  font-style: italic;
+  text-align: center;
+}

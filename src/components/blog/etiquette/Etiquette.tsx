@@ -1,6 +1,6 @@
 import { FC } from "react";
 import IconButton from "@/components/landing/fonctionnalites/iconButton/IconButton";
-import { PiToolbox, PiCode, PiBinoculars } from "react-icons/pi";
+import { PiToolbox, PiCode, PiBinoculars, PiWarning } from "react-icons/pi";
 import styles from "./Etiquette.module.css";
 
 interface iconMap {
@@ -33,4 +33,5 @@ const iconMap: iconMap = {
   Méthodes: { icon: PiToolbox, color: "--clear" },
   Technologies: { icon: PiCode, color: "--light-purple" },
   "Sur le terrain": { icon: PiBinoculars, color: "--yellow" },
+  "Choisir une catégorie": { icon: PiWarning, color: "--error" },
 };
