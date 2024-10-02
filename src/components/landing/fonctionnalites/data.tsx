@@ -34,19 +34,17 @@ export const iconMap: Record<string, React.FC> = {
   PiChats: PiChats,
   PiPresentationChart: PiPresentationChart,
 };
-export const data: [
-  {
+export const data: {
+  title: string;
+  description: string;
+  icon: string;
+  color: string;
+  cards: {
     title: string;
     description: string;
     icon: string;
-    color: string;
-    cards: {
-      title: string;
-      description: string;
-      icon: string;
-    }[];
-  }
-] = [
+  }[];
+}[] = [
   {
     title: "Concevez.",
     description:

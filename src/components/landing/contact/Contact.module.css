@@ -7,7 +7,11 @@
   gap: 50px;
   width: 100%;
   padding: 50px 0px;
-  background: linear-gradient(270deg, #a7a3bb, #b9b8c2);
+  background: linear-gradient(
+    180deg,
+    var(--background),
+    var(--light-purple) 50%
+  );
   max-width: 100%;
 }
 
@@ -25,9 +29,9 @@
   align-items: center;
   gap: 50px;
   flex-wrap: wrap;
-  background: var(--yellow);
+  background: var(--light-gray);
   border-radius: 20px;
-  width: 800px;
+  /* width: 500px; */
   max-width: calc(100% - 15%);
   padding: 30px 5%;
 }
@@ -44,5 +48,19 @@
 }
 
 .answer {
-  text-decoration: underline;
+  font-size: 1.5em;
+  font-family: var(--font-header);
+  font-weight: 500;
+  transition: text-decoration 0.3s;
+  border-radius: 20px;
+  padding: 10px 20px;
+  background: var(--light-purple);
+  color: var(--foreground);
+  transition: all 0.3s;
+}
+
+.answer:hover {
+  cursor: pointer;
+  transform: translateY(-2px);
+  filter: brightness(1.1);
 }
