@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./Hero.module.css";
 import Etiquette from "../etiquette/Etiquette";
-import Subscribe from "../subscribe/Subscribe";
-
+// import Subscribe from "../subscribe/Subscribe";
+import Link from "next/link";
 const Hero = () => {
   return (
     <div className={styles.container}>
@@ -12,7 +12,16 @@ const Hero = () => {
         ))}
       </div>
       <Etiquette etiquettes={text.etiquettes} />
-      <Subscribe />
+      {/* <Subscribe /> */}
+      <Link className={styles.arrowContainer} href="#fonctionnalites">
+        <svg
+          className={styles.arrow}
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+        >
+          <path d="M12 21c-.26 0-.52-.1-.71-.29l-10-10a1.003 1.003 0 0 1 1.42-1.42L12 18.59l9.29-9.3a1.003 1.003 0 0 1 1.42 1.42l-10 10c-.19.19-.45.29-.71.29z" />
+        </svg>
+      </Link>
     </div>
   );
 };

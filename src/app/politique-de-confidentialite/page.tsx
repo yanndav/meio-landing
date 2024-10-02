@@ -1,66 +1,81 @@
 import React from "react";
+import Link from "next/link";
 
 const PolitiqueDeConfidentialite: React.FC = () => {
   return (
     <div style={{ padding: "20px" }}>
-      <h1>Politique de Confidentialité</h1>
+      <h1>Politique de confidentialité</h1>
+
       <p>
-        Bienvenue sur notre page de politique de confidentialité. Nous nous
-        engageons à protéger votre vie privée et à garantir la sécurité de vos
-        informations personnelles. Cette politique de confidentialité explique
-        comment nous collectons, utilisons et protégeons vos données.
+        Chez <strong>Meio</strong>, nous attachons une grande importance à la
+        confidentialité de vos données. Cette politique de confidentialité
+        explique quelles informations nous collectons via notre landing page,
+        comment elles sont utilisées et les droits dont vous disposez.
       </p>
-      <h2>Collecte des Informations</h2>
-      <p>
-        Nous collectons des informations lorsque vous vous inscrivez sur notre
-        site, passez une commande, vous abonnez à notre newsletter ou remplissez
-        un formulaire. Les informations collectées peuvent inclure votre nom,
-        adresse e-mail, numéro de téléphone et/ou informations de carte de
-        crédit.
-      </p>
-      <h2>Utilisation des Informations</h2>
-      <p>
-        Toute information que nous collectons auprès de vous peut être utilisée
-        pour :
-      </p>
+
+      <h2>Données collectées</h2>
       <ul>
         <li>
-          Personnaliser votre expérience et répondre à vos besoins individuels
+          <strong>Adresse e-mail</strong> : Si vous choisissez de nous contacter
+          en nous fournissant votre adresse e-mail, nous utiliserons cette
+          information uniquement pour répondre à votre demande.
         </li>
-        <li>Améliorer notre site web</li>
-        <li>Améliorer le service client et vos besoins de prise en charge</li>
-        <li>Vous contacter par e-mail</li>
-        <li>Administrer un concours, une promotion ou une enquête</li>
+        <li>
+          <strong>Données techniques</strong> : L'hébergeur de notre site
+          collecte automatiquement des données techniques, telles que l'adresse
+          IP et le nom des pages consultées. Ces informations sont anonymes et
+          ne sont pas utilisées à des fins de suivi individuel.
+        </li>
       </ul>
-      <h2>Protection des Informations</h2>
+
+      <h2>Utilisation des données</h2>
+      <ul>
+        <li>
+          Les adresses e-mail collectées sont exclusivement utilisées pour
+          répondre à vos demandes et vous fournir des informations sur{" "}
+          <strong>Meio</strong>.
+        </li>
+        <li>
+          Les données techniques anonymes sont utilisées pour améliorer la
+          performance de notre site et garantir une navigation fluide.
+        </li>
+      </ul>
+
+      <h2>Partage des données</h2>
       <p>
-        Nous mettons en œuvre une variété de mesures de sécurité pour préserver
-        la sécurité de vos informations personnelles. Nous utilisons un cryptage
-        de pointe pour protéger les informations sensibles transmises en ligne.
-        Nous protégeons également vos informations hors ligne. Seuls les
-        employés qui ont besoin d'effectuer un travail spécifique (par exemple,
-        la facturation ou le service client) ont accès aux informations
-        personnelles identifiables.
+        Nous ne partageons aucune de vos données personnelles avec des tiers,
+        sauf si la loi l'exige.
       </p>
-      <h2>Consentement</h2>
+
+      <h2>Sécurité</h2>
       <p>
-        En utilisant notre site, vous consentez à notre politique de
-        confidentialité.
+        Nous prenons des mesures raisonnables pour protéger les données
+        collectées sur notre site. Toutefois, aucune méthode de transmission sur
+        Internet ou de stockage électronique n'est totalement sécurisée, et nous
+        ne pouvons garantir une sécurité absolue.
       </p>
-      <h2>Modifications de notre Politique de Confidentialité</h2>
+
+      <h2>Vos droits</h2>
       <p>
-        Si nous décidons de changer notre politique de confidentialité, nous
-        publierons ces changements sur cette page. La politique modifiée
-        s'appliquera uniquement aux informations collectées après la date de la
-        modification.
+        Vous avez le droit de demander l'accès à vos données personnelles, leur
+        rectification ou suppression. Pour exercer ces droits, veuillez nous
+        contacter à l'adresse suivante :{" "}
+        <Link
+          href={
+            "mailto:yann.collindavid@gmail.com?subject=Meio - Exercer mes droits sur mes données personnelles"
+          }
+        >
+          yann.collindavid@gmail.com
+        </Link>
+        .
       </p>
-      <h2>Contactez-nous</h2>
+
+      <h2>Modifications de la politique de confidentialité</h2>
       <p>
-        Si vous avez des questions concernant cette politique de
-        confidentialité, vous pouvez nous contacter en utilisant les
-        informations ci-dessous :
+        Cette politique de confidentialité peut être mise à jour de temps à
+        autre. Nous vous encourageons à consulter cette page régulièrement pour
+        être informé des éventuels changements.
       </p>
-      <p>Email: support@votresite.com</p>
     </div>
   );
 };

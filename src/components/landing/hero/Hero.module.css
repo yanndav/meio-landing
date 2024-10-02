@@ -7,7 +7,7 @@
   align-items: center;
   padding: 0 20px;
   gap: 1.7em;
-  background: linear-gradient(270deg, #a7a3bb, #b9b8c2);
+  background: linear-gradient(180deg, #a7a3bb, var(--background));
 }
 
 .accroche {
@@ -24,5 +24,29 @@
 @media (max-width: 600px) {
   .accroche {
     font-size: 2rem;
+  }
+}
+
+.arrowContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  height: 100px;
+}
+
+.arrow {
+  width: 50px;
+  height: 50px;
+  fill: black; /* Arrow color */
+  animation: moveUpDown 1.5s infinite ease-in-out;
+}
+@keyframes moveUpDown {
+  0%,
+  100% {
+    transform: translateY(0); /* Start and end position */
+  }
+  50% {
+    transform: translateY(-10px); /* Moves up by 10px at the midpoint */
   }
 }
