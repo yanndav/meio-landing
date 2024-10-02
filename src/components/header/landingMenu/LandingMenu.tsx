@@ -4,11 +4,15 @@ import React, { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import styles from "./LandingMenu.module.css";
+interface WindowSize {
+  width?: number;
+  height?: number;
+}
 const LandingMenu = () => {
   const pathname = usePathname();
   const size = useWindowSize();
 
-  if (pathname == "/" && size.width > 600) {
+  if (pathname == "/" && (size?.width ?? 0) > 600) {
     return (
       <div className={styles.section}>
         <Link href="#fonctionnalites">Fonctionnalités</Link>
@@ -20,7 +24,7 @@ const LandingMenu = () => {
   return null;
 };
 const useWindowSize = () => {
-  const [windowSize, setWindowSize] = useState({
+  const [windowSize, setWindowSize] = useState<WindowSize>({
     width: undefined,
     height: undefined,
   });
