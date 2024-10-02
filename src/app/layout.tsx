@@ -19,7 +19,8 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Meio",
-  description: "Vos données et équipes pour vos projets",
+  description:
+    "Rassemblez enfin vos équipes et données, pour suivre et piloter vos projets",
 };
 
 export default function RootLayout({
