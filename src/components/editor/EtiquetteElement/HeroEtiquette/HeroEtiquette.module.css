@@ -1,0 +1,78 @@
+.etiquette {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.container {
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.selector {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all ease 0.3s;
+  padding: 8px;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 150px;
+  z-index: 500;
+}
+
+.selector:hover {
+  box-shadow: 0px 0px 10px -4px var(--foreground);
+  transform: translateY(-2px);
+  background-color: var(--background);
+  justify-content: flex-start;
+}
+
+.selector > svg {
+  position: absolute;
+  right: 7px;
+  transition: all ease 0.3s;
+  fill: transparent !important;
+}
+.selector:hover > svg {
+  transform: scale(1.05);
+  fill: var(--foreground) !important;
+}
+
+.choicesContainer {
+  position: absolute;
+  top: 100%;
+  background-color: var(--background);
+  box-shadow: 0px 0px 10px -4px var(--foreground);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  padding: 4px 1px;
+  z-index: 499;
+  width: 160px;
+  border-radius: 20px;
+}
+
+.choice {
+  width: calc(100% - 10px);
+  padding: 5px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+.choice div {
+  justify-content: flex-start;
+}
+.choice:hover {
+  background-color: var(--clear);
+}

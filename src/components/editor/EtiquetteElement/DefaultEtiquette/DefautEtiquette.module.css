@@ -1,0 +1,7 @@
+.etiquette {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  background-color: var(--clear);
+  border-radius: 20px;
+}
