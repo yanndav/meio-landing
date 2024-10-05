@@ -1,9 +1,13 @@
+.container {
+  position: relative;
+}
+
 .level1 {
   font-size: 2.5em;
   font-weight: 600;
   margin: 0;
   text-align: center;
-  white-space: pre;
+  /* white-space: pre; */
 }
 
 .level2 {
@@ -12,5 +16,13 @@
   margin: 0;
   font-style: italic;
   text-align: center;
-  white-space: pre;
+  /* white-space: pre; */
+}
+
+.placeholder {
+  font-style: italic;
+  opacity: 50%;
+  color: var(--foreground);
+  cursor: text;
+  /* pointer-events: none; */
 }

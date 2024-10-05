@@ -27,6 +27,11 @@ export interface CustomEtiquetteElement extends BaseElement {
   category: string;
   children: CustomText[];
 }
+export interface NodeProperties {
+  type: string; // e.g., 'heading', 'paragraph', etc.
+  level?: number; // Optional, used for headings
+  category?: string; // Optional, used for custom node categorization
+}
 
 type CustomChildren =
   | ParagraphElement

@@ -28,11 +28,11 @@ const HeroEtiquetteSelector: React.FC<HeroEtiquetteSelectorProps> = ({
           boxShadow: open ? "0px 0px 10px -4px var(--foreground)" : "",
           backgroundColor: open ? "var(--background)" : "",
           transform: open ? "translateY(-2px)" : "",
-          justifyContent: open ? "flex-start" : "",
+          // justifyContent: open ? "flex-start" : "",
         }}
       >
         {children}
-        <PiCaretCircleDown size={20} />
+        {/* <PiCaretCircleDown size={20} /> */}
       </div>
       {open && (
         <div className={styles.choicesContainer}>

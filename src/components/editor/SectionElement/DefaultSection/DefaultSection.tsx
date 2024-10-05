@@ -8,8 +8,10 @@ const DefaultSection: React.FC<ExtendedRenderElementProps> = ({
   children,
 }) => {
   return (
-    <div className={styles.container} {...attributes}>
-      {children}
+    <div className={styles.wrapper}>
+      <div className={styles.container} {...attributes}>
+        {children}
+      </div>
     </div>
   );
 };

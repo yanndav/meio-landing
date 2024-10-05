@@ -74,10 +74,10 @@ const HeroEtiquette: React.FC<ExtendedRenderElementProps> = ({
       return (
         <HeroEtiquetteSelector path={path}>
           <div className={styles.etiquette}>
-            {title && (
-              <IconButton icon={PiWarning} color={"--error"} type={"normal"} />
-            )}
-            <div contentEditable={false}>{children}</div>
+            <IconButton icon={PiWarning} color={"--error"} type={"normal"} />
+            <span contentEditable={false} className={styles.placeholder}>
+              Catégorie
+            </span>
           </div>
         </HeroEtiquetteSelector>
       );
